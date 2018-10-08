@@ -324,3 +324,5 @@ if [ -f ~/.bash_ps1 ]; then
 fi
 
 export PATH+=:/home/raghav/.scripts
+export PATH+=:/home/raghav/sandbox/crosscompile/tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin
+
