@@ -1,0 +1,11 @@
+#useful lines of code 
+
+#if first line in file matches regular expression
+
+
+for f in *; do   [[ `head -1 $f` =~ ^#! ]] && echo "$f matched" || echo "did not"  ; done
+
+#notes:
+#interesting if sturcture 
+#using loops
+

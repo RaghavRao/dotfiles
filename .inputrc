@@ -1,0 +1,24 @@
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
+"\e\e": kill-whole-line
+
+TAB: menu-complete
+"\e[Z": "\e-1\C-i"
+set show-all-if-ambiguous on
+set menu-complete-display-prefix on
+
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
+
+
+"\C-H": backward-kill-word
+
+set colored-stats
+
