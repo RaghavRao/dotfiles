@@ -7,5 +7,5 @@ ln -s "$.bash_snippets" "$HOME/.bash_snippets"
 ln -s "$.inputrc" "$HOME/.inputrc"
 ln -s "$.pythonrc" "$HOME/.pythonrc"
 echo "binding new .inputrc to current session..."
-bind -f "$HOME/.inputrc"
+bind -f ".inputrc"
 
