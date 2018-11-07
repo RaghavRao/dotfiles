@@ -47,3 +47,12 @@ nf() {
 
 }
 
+delete_line () {  
+    read -p "Delete all lines containing `tput bold`$1`tput sgr0` from `tput bold`$2`tput sgr0`? (y/n)" -n 1 -r
+    echo    # (optional) move to a new line
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+        grep -vwE "$1" "$2" >| "$2".deleted 
+        echo "Saved as "$2".deleted"
+    fi
+} 
