@@ -329,4 +329,4 @@ export PATH+=:/home/raghav/sandbox/crosscompile/tools/arm-bcm2708/arm-rpi-4.9.3-
 export WINEPREFIX=~/.adewine
 set -o noclobber
 set bind-tty-special-chars off
-
+set -o vi
