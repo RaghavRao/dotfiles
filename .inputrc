@@ -22,3 +22,17 @@ set menu-complete-display-prefix on
 
 set colored-stats
 
+set completion-ignore-case on
+
+set show-mode-in-prompt on
+set keymap emacs
+"\ee": vi-editing-mode
+
+set keymap vi-command
+"\ee": emacs-editing-mode
+
+# key bindings to get out of vi-editing-mode
+set keymap vi-insert
+"\ee": vi-movement-mode
+"\C-w": unix-word-rubout
+
