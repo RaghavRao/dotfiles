@@ -122,7 +122,7 @@ fi
 
 termbin() { cat "$1" | nc termbin.com 9999; }
 nameappend() { for file in *."$1"; do echo "$file"$'\n'"$(cat -- "$file")" > "$file".upload; done; }
-b() { xrandr --output eDP1 --brightness "$1"; }
+b() { xrandr --output eDP-1 --brightness "$1"; }
 
 add_alias() { echo alias \'$1\'=\'$2\' >> ~/.bash_aliases; }
 brt() { nohup ~/yoga_brightness.sh ; }
@@ -330,3 +330,4 @@ export WINEPREFIX=~/.adewine
 set -o noclobber
 set bind-tty-special-chars off
 set -o vi
+bind Space:magic-space

@@ -1,43 +1,15 @@
-"\e[1;5C": forward-word
-"\e[1;5D": backward-word
-"\e[5C": forward-word
-"\e[5D": backward-word
-"\e\e[C": forward-word
-"\e\e[D": backward-word
-"\e\e": kill-whole-line
-
-TAB: menu-complete
-"\e[Z": "\e-1\C-i"
 set show-all-if-ambiguous on
 set menu-complete-display-prefix on
-
-
+set colored-stats
+set completion-ignore-case on
+"\e\e": kill-whole-line
+TAB: menu-complete
+"\e[Z": "\e-1\C-i"
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
 "\e[C": forward-char
 "\e[D": backward-char
-
-
 "\C-H": backward-kill-word
-
-set colored-stats
-
-set completion-ignore-case on
-
-set show-mode-in-prompt on
-set vi-cmd-mode-string \1\e[32m\2:\1\e[0m\2
-set vi-ins-mode-string \1\e[34m\2+\1\e[0m\2
-set emacs-mode-string \1\e[1;31m\2@\1\e[0m\2 
-set keymap emacs
-"\ee": vi-editing-mode
-
-set keymap vi-command
-"\ee": emacs-editing-mode
-
-# key bindings to get out of vi-editing-mode
-set keymap vi-insert
-# "\ee": vi-movement-mode
-"\ee": emacs-editing-mode
-"\C-w": unix-word-rubout
-"\e.": yank-last-arg
 

@@ -9,3 +9,9 @@ for f in *; do   [[ `head -1 $f` =~ ^#! ]] && echo "$f matched" || echo "did not
 #interesting if sturcture 
 #using loops
 
+
+#opening vim at a match using python to split string:
+rg "eDP-1" ~/.bashrc
+rg -n "eDP-1" ~/.bashrc |  python -c "import sys; print(sys.stdin.read().rstrip().split(':')[0])"
+vim +`rg -n "eDP-1" ~/.bashrc |  python -c "import sys; print(sys.stdin.read().rstrip().split(':')[0])"` .bashrc
+
