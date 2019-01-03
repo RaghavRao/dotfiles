@@ -1,15 +1,33 @@
+#NOTE: For to edit key combinations, press CTRL+V in terminal, followed by the desired key combination.
+# When entereing this into inputrc, replace the first two characters shown with \e
+# For example, my terminal shows "^[[1;5D" if I do CTRL+Backspace (I make sure Ctrl+V is done first)
+# When using this, I use "\e[1;5D" instead.
+
+# On TAB, first show suggestions if there are multiple, then cycle through them on next TAB
+TAB: menu-complete
 set show-all-if-ambiguous on
 set menu-complete-display-prefix on
+"\e[Z": "\e-1\C-i" #Shift+TAB cycles in reverse
+
+#Show color for TAB autocomplete
 set colored-stats
-set completion-ignore-case on
+
+#Double ESC deletes entire line
 "\e\e": kill-whole-line
-TAB: menu-complete
-"\e[Z": "\e-1\C-i"
+
+# Match Partial commands.
+# For example if you type ls and press the up arrow, it cycles through every command starting with ls in history
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+
+#Ctrl + L/R Arrows jumps by word
 "\e[1;5C": forward-word
 "\e[1;5D": backward-word
+
+# L/R Arrow keys move by characters. This fixes arrow issues on some laptops
 "\e[C": forward-char
 "\e[D": backward-char
+
+#CTRL+Backspace kills word
 "\C-H": backward-kill-word
 
